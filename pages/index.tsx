@@ -17,36 +17,26 @@ import {
 } from '@chakra-ui/react'
 import { ArrowForwardIcon, CheckIcon, InfoIcon } from '@chakra-ui/icons'
 import { createBreakpoints } from '@chakra-ui/theme-tools'
+import { Showcase } from '../components/Showcase'
 
-const breakpoints = createBreakpoints({
-  sm: '30em',
-  md: '48em',
-  lg: '62em',
-  xl: '80em',
-  '2xl': '96em',
-})
+// const breakpoints = createBreakpoints({
+//   sm: '30em',
+//   md: '48em',
+//   lg: '62em',
+//   xl: '80em',
+//   '2xl': '96em',
+// })
 
 const Background = () => (
   <>
-    <div className={styles.showcase}>
-      <div className={styles.bgWrap}>
-        <NextImage
-          alt="Mountains"
-          src="/images/image-bg.jpg"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          priority
-        />
-      </div>
-      <div className={styles.bgText}>
-        <h1>Plataforma gratuita de ensino</h1>
-        <p>Aprenda de forma interativa</p>
-      </div>
-    </div>
+    <Showcase />
     <main>
       <section className={styles.base}>
-        <Box className={styles.container} pt="2rem">
+        <Box
+          className={styles.container}
+          pt="2rem"
+          px={['2rem', '2rem', '2rem', '1rem']}
+        >
           <Heading as="h2" size="lg">
             Formação de base
           </Heading>
@@ -59,7 +49,8 @@ const Background = () => (
           <UnorderedList py="3rem">
             <Flex
               justifyContent="space-between"
-              // flexDirection={['column', 'column', 'column', 'row']}
+              flexDirection={['column', 'column', 'column', 'row']}
+              alignItems="center"
             >
               <Card
                 name="Aprender a ler"
@@ -86,6 +77,7 @@ const Background = () => (
           background="gray.900"
           alignItems="center"
           justifyContent="space-around"
+          flexDirection={['column', 'column', 'row', 'row']}
         >
           <Text color="white">
             Educ Fórum - comunidade de professores e alunos
@@ -96,6 +88,7 @@ const Background = () => (
             size="lg"
             width="300px"
             cursor="pointer"
+            mt={[5, 5, 0, 0]}
             leftIcon={<ArrowForwardIcon />}
           >
             Acessar Fórum
@@ -103,7 +96,7 @@ const Background = () => (
         </Flex>
       </section>
       <section className={styles.container}>
-        <Grid templateColumns="repeat(2, 1fr)">
+        <Grid templateColumns={['1fr', '1fr', '1fr', 'repeat(2, 1fr)']}>
           <GridItem justifySelf="center" alignSelf="center" px="2rem">
             <Image width="300px" src="/images/studying.jpg" alt="Estudando" />
           </GridItem>
@@ -119,8 +112,8 @@ const Background = () => (
         </Grid>
       </section>
       <section className={styles.parceria}>
-        <Box className={styles.container}>
-          <Grid templateColumns="repeat(2, 1fr)">
+        <Box className={styles.container} pt={['2rem', '2rem', '2rem', 0]}>
+          <Grid templateColumns={['1fr', '1fr', '1fr', 'repeat(2, 1fr)']}>
             <GridItem
               display="flex"
               alignItems="center"
@@ -131,7 +124,11 @@ const Background = () => (
                 A Educ é habilitada pelo MEC, com a nossa plataforma é possível
                 agendar avaliações e emitir o certificado de conclusão do ensino
                 fundamental. <CheckIcon />
-                <Box>
+                <Box
+                  display={{ base: 'flex' }}
+                  alignItems={{ base: 'center' }}
+                  justifyContent={{ base: 'center' }}
+                >
                   <Button
                     colorScheme="blue"
                     border="none"
@@ -169,27 +166,30 @@ const Background = () => (
           </Text>
           <Divider my="5" />
         </Heading>
-        <Grid templateColumns="repeat(2, 1fr)" justifyItems="center">
-          <GridItem my="6" width="450px">
+        <Grid
+          templateColumns={['1fr', '1fr', '1fr', 'repeat(2, 1fr)']}
+          justifyItems="center"
+        >
+          <GridItem my="6" width={['280px', '350px', '400px', '450px']}>
             <Student
               nome="Felipe Curcio"
               comentario="Com a Educ pude desensolver habilidades de programação, mal posso esperar para começar os outros cursos."
               avatar="/images/felipe-curcio.png"
             />
           </GridItem>
-          <GridItem my="6" width="450px">
+          <GridItem my="6" width={['300px', '400px', '420px', '450px']}>
             <Student
               nome="John Doe"
               comentario="Apesar da escola ser muito distante de minha casa, meu filho pôde terminar o ensino fundamental pela plataforma usando o celular."
             />
           </GridItem>
-          <GridItem my="6" width="450px">
+          <GridItem my="6" width={['300px', '400px', '420px', '450px']}>
             <Student
               nome="Jane Doe"
               comentario="Consegui terminar o fundamental e desenvolver habilidades de base para o mercado financeiro."
             />
           </GridItem>
-          <GridItem my="6" width="450px">
+          <GridItem my="6" width={['300px', '400px', '420px', '450px']}>
             <Student
               nome="Johnny Doe"
               comentario="Essa plataforma é incrível."
@@ -199,7 +199,12 @@ const Background = () => (
       </section>
       <section>
         <Divider my="5" />
-        <Box py="5rem" background="#9bb7b5">
+        <Box
+          py="5rem"
+          background="#9bb7b5"
+          px={{ base: '1rem' }}
+          textAlign={{ base: 'center' }}
+        >
           <Flex
             flexDirection="column"
             alignItems="center"

@@ -16,12 +16,16 @@ export function Footer() {
     <Grid
       background="#354554"
       color="white"
-      templateColumns="repeat(3, 1fr)"
+      templateColumns={{ base: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }}
       justifyItems="center"
       p="1rem"
       fontSize="lg"
     >
-      <GridItem gridColumn="2" justifySelf="center" alignSelf="center">
+      <GridItem
+        gridColumn={{ base: '1', md: '2' }}
+        justifySelf="center"
+        alignSelf="center"
+      >
         <Text>&copy; 2021 Educ.io, Inc.</Text>
       </GridItem>
       <GridItem alignSelf="center">
@@ -55,10 +59,4 @@ export function Footer() {
       </GridItem>
     </Grid>
   )
-  {
-    /* <footer className={styles.footer}>&copy; 2021 Educ.io, Inc.</footer> */
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-  }
 }

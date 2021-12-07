@@ -1,9 +1,22 @@
 .headerContainer {
+  position: relative;
   background: var(--dark-blue);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 6rem;
+  padding: 0.5rem 6.5rem;
+  z-index: 10;
+
+  > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+
+    img {
+      width: 100%;
+    }
+  }
 
   ul {
     list-style: none;
@@ -15,6 +28,16 @@
       &:hover {
         filter: brightness(0.8);
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .headerContainer {
+    padding: 0.5rem 2rem;
+
+    > a {
+      width: 5.5rem;
     }
   }
 }

@@ -9,7 +9,7 @@ interface StudentProps {
 export function Student({ nome, comentario, avatar }: StudentProps) {
   return (
     <Box boxShadow="lg" p="6" rounded="md" bg="white">
-      <Flex alignItems="center">
+      <Flex alignItems="center" justifyContent={{ base: 'space-around' }}>
         <Image
           borderRadius="full"
           boxSize="50px"
