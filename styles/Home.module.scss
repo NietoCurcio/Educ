@@ -12,3 +12,9 @@
   background-color: var(--dark-blue);
   color: #fff;
 }
+
+@media (min-width: 3000px) {
+  .container {
+    max-width: 2120px;
+  }
+}

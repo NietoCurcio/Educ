@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import NextImage from 'next/image'
 import styles from '../styles/Home.module.scss'
 import { Card } from '../components/Card'
 import { Student } from '../components/Student'
@@ -16,19 +15,13 @@ import {
   Image,
 } from '@chakra-ui/react'
 import { ArrowForwardIcon, CheckIcon, InfoIcon } from '@chakra-ui/icons'
-import { createBreakpoints } from '@chakra-ui/theme-tools'
 import { Showcase } from '../components/Showcase'
-
-// const breakpoints = createBreakpoints({
-//   sm: '30em',
-//   md: '48em',
-//   lg: '62em',
-//   xl: '80em',
-//   '2xl': '96em',
-// })
 
 const Background = () => (
   <>
+    <Head>
+      <title>Educ | Home</title>
+    </Head>
     <Showcase />
     <main>
       <section className={styles.base}>
@@ -84,7 +77,6 @@ const Background = () => (
           </Text>
           <Button
             colorScheme="blue"
-            border="none"
             size="lg"
             width="300px"
             cursor="pointer"
@@ -131,7 +123,6 @@ const Background = () => (
                 >
                   <Button
                     colorScheme="blue"
-                    border="none"
                     size="lg"
                     cursor="pointer"
                     mt="5"
@@ -215,7 +206,6 @@ const Background = () => (
             </Heading>
             <Button
               colorScheme="blue"
-              border="none"
               size="lg"
               cursor="pointer"
               mt="5"

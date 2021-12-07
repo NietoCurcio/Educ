@@ -9,7 +9,7 @@ interface CardProps {
 
 export function Card({ name, image, description }: CardProps) {
   return (
-    <Box maxW="280px" alignItems="baseline">
+    <Box maxW="280px" alignItems="baseline" mb={{ base: '2rem' }}>
       <Flex flexDirection="column">
         <Box className={styles.cardImageContainer}>
           <Image
