@@ -1,6 +1,9 @@
 .cardImageContainer {
   cursor: pointer;
   position: relative;
+  height: 100%;
+  width: 280px;
+  height: 210px;
 
   img {
     position: relative;
@@ -12,11 +15,11 @@
     z-index: 0;
     top: -10px;
     left: 16px;
-    height: 97%;
+    height: 100%;
     width: 100%;
     padding: 1rem;
     background: rgba(0, 0, 0, 0.8);
-    border-radius: 10px;
+    border-radius: 9px;
     transition: left 0.2s, top 0.2s;
   }
 

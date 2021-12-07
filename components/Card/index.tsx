@@ -14,9 +14,9 @@ export function Card({ name, image, description }: CardProps) {
         <Box className={styles.cardImageContainer}>
           <Image
             className={styles.cardImage}
-            borderRadius="10"
-            htmlWidth="280"
-            htmlHeight="210"
+            borderRadius="10px"
+            htmlWidth="100%"
+            htmlHeight="100%"
             objectFit="cover"
             src={image}
             alt={name}
