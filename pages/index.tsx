@@ -16,6 +16,15 @@ import {
   Image,
 } from '@chakra-ui/react'
 import { ArrowForwardIcon, CheckIcon, InfoIcon } from '@chakra-ui/icons'
+import { createBreakpoints } from '@chakra-ui/theme-tools'
+
+const breakpoints = createBreakpoints({
+  sm: '30em',
+  md: '48em',
+  lg: '62em',
+  xl: '80em',
+  '2xl': '96em',
+})
 
 const Background = () => (
   <>
@@ -48,11 +57,14 @@ const Background = () => (
             àqueles que não têm acesso.
           </Text>
           <UnorderedList py="3rem">
-            <Flex justifyContent="space-between">
+            <Flex
+              justifyContent="space-between"
+              // flexDirection={['column', 'column', 'column', 'row']}
+            >
               <Card
                 name="Aprender a ler"
                 image="/images/aprender-a-ler.jpg"
-                description="Todos devem saber ler e estamos aqui para te ajudar."
+                description="Também ensinamos a ler. Conhece alguem não sabe ler e escrever? Indique a Educ."
               />
               <Card
                 name="Ensino fundamental"
@@ -62,7 +74,7 @@ const Background = () => (
               <Card
                 name="Habilidades"
                 image="/images/ilustracao.jpg"
-                description="Aprenda sobre ilustração, design, programação, produção de contéudo, mercado financeiro e música."
+                description="Desenvolva habilidades em ilustração, design, programação, produção de contéudo, mercado financeiro e música."
               />
             </Flex>
           </UnorderedList>
@@ -161,18 +173,27 @@ const Background = () => (
           <GridItem my="6" width="450px">
             <Student
               nome="Felipe Curcio"
-              comentario="Essa plataforma é incrível"
+              comentario="Com a Educ pude desensolver habilidades de programação, mal posso esperar para começar os outros cursos."
               avatar="/images/felipe-curcio.png"
             />
           </GridItem>
           <GridItem my="6" width="450px">
-            <Student nome="John Doe" comentario="Essa plataforma é incrível" />
+            <Student
+              nome="John Doe"
+              comentario="Apesar da escola ser muito distante de minha casa, meu filho pôde terminar o ensino fundamental pela plataforma usando o celular."
+            />
           </GridItem>
           <GridItem my="6" width="450px">
-            <Student nome="Jenny Doe" comentario="Essa plataforma é incrível" />
+            <Student
+              nome="Jane Doe"
+              comentario="Consegui terminar o fundamental e desenvolver habilidades de base para o mercado financeiro."
+            />
           </GridItem>
           <GridItem my="6" width="450px">
-            <Student nome="John Doe" comentario="Essa plataforma é incrível" />
+            <Student
+              nome="Johnny Doe"
+              comentario="Essa plataforma é incrível."
+            />
           </GridItem>
         </Grid>
       </section>

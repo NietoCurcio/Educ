@@ -19,7 +19,7 @@ export const Header = () => {
       </Link>
       <ul>
         <li>
-          <Link href="/contribuir">
+          <Link href="/">
             <a>Contribuir</a>
           </Link>
         </li>
