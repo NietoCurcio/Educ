@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --dark: #47423f;
+  --white: #e7e3dc;
+  --light-blue: #9bb7b5;
+  --blue: #6a8ba9;
+  --dark-blue: #354554;
+}
+
+html,
+body {
+  background: var(--white);
+}
+
+@media (max-width: 1080px) {
+  // tamanho de Ipad
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  // tamanho mobile
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font-family: Poppins, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

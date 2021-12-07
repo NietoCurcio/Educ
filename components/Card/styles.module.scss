@@ -1,0 +1,33 @@
+.cardImageContainer {
+  position: relative;
+
+  p {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    height: 97%;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    transition: left 0.2s;
+  }
+
+  p::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  &:hover {
+    p {
+      visibility: visible;
+      left: 0;
+    }
+  }
+}
