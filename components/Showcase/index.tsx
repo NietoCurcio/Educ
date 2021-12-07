@@ -6,16 +6,15 @@ import { ArrowForwardIcon } from '@chakra-ui/icons'
 export function Showcase() {
   return (
     <div className={styles.showcase}>
-      <div className={styles.bgWrap}>
-        <NextImage
-          alt="Mountains"
-          src="/images/image-bg.jpg"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          priority
-        />
-      </div>
+      <NextImage
+        className={styles.showcaseImg}
+        alt="Mountains"
+        src="/images/image-bg.jpg"
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+        priority
+      />
       <div className={styles.bgText}>
         <h1>Plataforma gratuita de ensino</h1>
         <p>Aprenda de forma interativa</p>

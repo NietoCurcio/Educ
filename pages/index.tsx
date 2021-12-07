@@ -17,6 +17,27 @@ import {
 import { ArrowForwardIcon, CheckIcon, InfoIcon } from '@chakra-ui/icons'
 import { Showcase } from '../components/Showcase'
 
+const cards = [
+  {
+    name: 'Aprender a ler',
+    description:
+      'Também ensinamos a ler. Conhece alguem não sabe ler e escrever? Indique a Educ.',
+    image: '/images/aprender-a-ler.jpg',
+  },
+  {
+    name: 'Ensino fundamental',
+    image: '/images/certificado.jpg',
+    description:
+      'Conclua o ensino fundamental com a Educ, reconhecida pelo MEC.',
+  },
+  {
+    name: 'Habilidades',
+    image: '/images/ilustracao.jpg',
+    description:
+      'Desenvolva habilidades em ilustração, design, programação, produção de contéudo, mercado financeiro e música.',
+  },
+]
+
 const Background = () => (
   <>
     <Head>
@@ -45,21 +66,14 @@ const Background = () => (
               flexDirection={['column', 'column', 'column', 'row']}
               alignItems="center"
             >
-              <Card
-                name="Aprender a ler"
-                image="/images/aprender-a-ler.jpg"
-                description="Também ensinamos a ler. Conhece alguem não sabe ler e escrever? Indique a Educ."
-              />
-              <Card
-                name="Ensino fundamental"
-                image="/images/certificado.jpg"
-                description="Conclua o ensino fundamental com a Educ, reconhecida pelo MEC."
-              />
-              <Card
-                name="Habilidades"
-                image="/images/ilustracao.jpg"
-                description="Desenvolva habilidades em ilustração, design, programação, produção de contéudo, mercado financeiro e música."
-              />
+              {cards.map((card, idx) => (
+                <Card
+                  key={idx}
+                  name={card.name}
+                  image={card.image}
+                  description={card.description}
+                />
+              ))}
             </Flex>
           </UnorderedList>
         </Box>
@@ -116,21 +130,17 @@ const Background = () => (
                 A Educ é habilitada pelo MEC, com a nossa plataforma é possível
                 agendar avaliações e emitir o certificado de conclusão do ensino
                 fundamental. <CheckIcon />
-                <Box
-                  display={{ base: 'flex' }}
-                  alignItems={{ base: 'center' }}
-                  justifyContent={{ base: 'center' }}
+                <Button
+                  colorScheme="blue"
+                  size="lg"
+                  cursor="pointer"
+                  mt="5"
+                  display="block"
+                  mx={{ base: 'auto' }}
+                  leftIcon={<InfoIcon />}
                 >
-                  <Button
-                    colorScheme="blue"
-                    size="lg"
-                    cursor="pointer"
-                    mt="5"
-                    leftIcon={<InfoIcon />}
-                  >
-                    Ver mais
-                  </Button>
-                </Box>
+                  Ver mais
+                </Button>
               </Text>
             </GridItem>
             <GridItem p="2rem" justifySelf="center">
@@ -151,7 +161,7 @@ const Background = () => (
           Feedback
           <Text fontSize="lg">
             Opnião dos estudantes da{' '}
-            <Text color="blue.700" display="inline">
+            <Text as="span" color="blue.700" display="inline">
               Educ
             </Text>
           </Text>

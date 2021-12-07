@@ -35,13 +35,18 @@ export function Footer() {
               <a
                 href="https://www.facebook.com/felipeantonio.nieto/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaFacebook />
               </a>
             </ListItem>
             <Spacer />
             <ListItem>
-              <a href="https://github.com/NietoCurcio" target="_blank">
+              <a
+                href="https://github.com/NietoCurcio"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaGithub />
               </a>
             </ListItem>
@@ -50,6 +55,7 @@ export function Footer() {
               <a
                 href="https://www.linkedin.com/in/felipe-antonio-nieto-curcio-9b865116a/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaLinkedin />
               </a>
