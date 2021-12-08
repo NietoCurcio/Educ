@@ -58,7 +58,7 @@ const Background = () => (
             Acreditamos que um bom aprendizado dos fundamentos é primordial,
             dessa forma é possivel concluir o ensino fundamental em nossa
             plataforma. Nosso objetivo é permitir uma educação de qualidade para
-            àqueles que não têm acesso.
+            quem não tem acesso.
           </Text>
           <UnorderedList py="3rem">
             <Flex
