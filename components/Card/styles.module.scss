@@ -21,13 +21,12 @@
     background: rgba(0, 0, 0, 0.8);
     border-radius: 9px;
     transition: left 0.2s, top 0.2s;
+    pointer-events: none;
   }
 
-  &:hover {
-    p {
-      z-index: 2;
-      top: 0;
-      left: 0;
-    }
+  .cardImage:hover + p {
+    z-index: 2;
+    top: 0;
+    left: 0;
   }
 }
