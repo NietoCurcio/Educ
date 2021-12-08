@@ -23,3 +23,5 @@ A escolha do NextJs é porque ele é mais indicado para otimizar a indexação d
 Responsividade é essencial em um projeto que propõe acesso à educação, dessa forma a aplicação se adapta ao viewport do dispositivo.
 
 ## Live Demo
+
+https://educ-beryl.vercel.app/
